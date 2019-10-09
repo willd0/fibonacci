@@ -7,24 +7,24 @@ def recursive_fib(number)
 end
 
 def iterative_fib(number)
-  a = 0
+  value = 0
   array = []
-  while a <= number
-    if a < 2
-      array << a
+  while value <= number
+    if value < 2
+      array << value
     else
-      b = array[-1] + array[-2]
-      array << b
+      sequence_value = array[-1] + array[-2]
+      array << sequence_value
     end
-    a = a + 1
+    value = value + 1
   end
     return array.pop
 end
 
-x = iterative_fib(35)
-puts x
-y = recursive_fib(35)
-puts y
+iterative_result = iterative_fib(35)
+puts iterative_result
+recursive_result = recursive_fib(35)
+puts recursive_result
 
 require 'benchmark'
 num = 35
